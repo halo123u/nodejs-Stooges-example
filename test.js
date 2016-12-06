@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 app.set('view engine', 'pug');
-app.set('view options', {layout: true});
+app.set('view options', { layout: true });
 app.set('views', __dirname + '/views');
 
 
@@ -13,7 +13,7 @@ app.get('/stooges/:name?', (req,res,next)=>{
         case 'larry':
         case 'curly':
         case 'moe':
-            res.render(`stooges`, {stooges:name});
+            res.render('stooges', {stooge: name});
             break;
         
         default:
